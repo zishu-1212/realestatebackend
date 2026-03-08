@@ -54,7 +54,6 @@ app.post("/api/consultation", async (req, res) => {
 });
 
 // Start server
-const PORT = process.env.PORT || 8000;
-app.listen(PORT, () => {
-  console.log(`🚀 Backend running at http://localhost:${PORT}`);
-});
+const PORT = process.env.PORT; // Only Railway/Render port
+app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
+
